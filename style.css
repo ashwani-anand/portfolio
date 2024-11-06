@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark and Light Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Galaxy Background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #000046, #1CB5E0);
+    z-index: -1;
+    animation: stars 60s infinite linear;
+}
+
+@keyframes stars {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 1000px 1000px;
+    }
+}
+
+/* Hero Section */
+header#home {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    z-index: 10;
+    animation: floatIn 2s ease-in-out;
+}
+
+@keyframes floatIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-text {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1CB5E0;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #007B7F;
+    transform: scale(1.05);
+}
+
+/* Parallax Effect */
+.parallax {
+    position: relative;
+    padding: 100px 20px;
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Project Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: #1CB5E0;
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #ffffff;
+    /* Updated text color for better visibility */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Cursor */
+.cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-in-out;
+    z-index: 10000;
+}
+
+.cursor--trailing {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+    z-index: 9999;
+}
+
+/* Smooth Hover Effects for Buttons */
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1CB5E0;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea,
+#contact button {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Updated to match theme */
+    color: white;
+}
+
+#contact button {
+    background-color: #1CB5E0;
+    border: none;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #007B7F;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #1CB5E0;
+}
+
+/* Contact Section Text Links */
+#contact p a {
+    color: #1CB5E0;
+    text-decoration: none;
+}
+
+#contact p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1CB5E0;
+    color: white;
+}
